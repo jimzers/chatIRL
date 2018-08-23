@@ -15,7 +15,7 @@ class Profile(models.Model):
     last_name = models.TextField(max_length=30, blank=True)
     email = models.TextField(max_length=30, blank=True)
     bio = models.TextField(max_length=500, blank=True)
-    location = models.CharField(max_length=30, blank=True)
+    location = models.CharField(max_length=50, blank=True)
     birth_date = models.DateField(null=True, blank=True)
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
                                  message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
